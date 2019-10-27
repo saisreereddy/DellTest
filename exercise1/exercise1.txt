@@ -1,0 +1,114 @@
+let searchSection = document.querySelector('.product-selector.jumbotron-overlay .row');
+
+let IconCardSection = document.querySelector('.homepageResources .row.resource-tiles);
+
+//After appending the icon cards section to the searchsection and adding class names to each section this view can be achieved.
+
+//Below is the rough structure of HTML will lookk after adding the class ,
+
+//Especially col-md-push-6 to search section and col-md-pull-6 to icon cards section
+
+//Attached the HTML page of how th structure looks after adding relevant classes
+
+<div class="product-selector jumbotron-overlay">
+	<div class="container">
+		<div class="row resource-tiles">
+			<div class="col-md-push-6 col-lg-6 col-md-6 col-xs-12 col-xs-offset-0 divHomeEntrySelection" style="
+				margin-bottom: 40px;">
+				<!--Entry Selection Component-->
+				<div id="home-product-box" class="ng-scope">
+				</div>
+				<!--END Entry Selection Component-->
+				<div class="homecatalog homecatalogmodal modal fade " id="catalog-modal" style="display: none;" role="dialog" tabindex="-1" aria-labelledby="psModelHead">
+					<div class="modal-dialog modal-wide">
+						<div class="modal-content">
+							<div class="row top-offset-20 bottom-offset-20" id="divCatalogContentLoading" style="display:none;">
+								<div class="col-xs-12 text-center"><i class="icon-ui-loading" aria-hidden="true"></i></div>
+							</div>
+							<div id="divCatalogContent">
+								<div ng-controller="catalogController as cl" id="divCatalogs" class="ng-scope">
+									<div class="modal-header">
+										<button type="button" class="close psbtnclose" aria-label="" data-dismiss="modal" onclick="$('#breadCrumpAllProducts').click();">×</button>
+										<div id="divCatalogBreadcrumb">
+											<span>
+												<h3 id="psModelHead" class="modal-title breadcrumb-title"></h3>
+											</span>
+										</div>
+									</div>
+									<div class="modal-body">
+										<div id="divSubCategories"></div>
+										<div id="divSubProducts"></div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default psbtnclose" data-dismiss="modal" onclick="$('#breadCrumpAllProducts').click();">
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="display: none"><a href="/support/home/in/en/inbsd1/api/catalog/allproducts">Browse all products</a></div>
+			</div>
+			<div class="col-lg-4 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 divHomeRvps" style="display: none">
+				<div id="rvps-int-container" class="ng-scope">
+				</div>
+			</div>
+			<div class="bottom-offset-30 col-md-pull-6 col-lg-6 col-md-6">
+				<div class="row">
+					<div id="quickresourcetopdiv" class="col-md-6 col-sm-6 col-xs-12">
+						<div class="well card text-center row-overlay" data-mh="quicklinks-res" style="height: 117px;">
+							<a href="//www.dell.com/support/home/in/en/inbsd1?app=licenses" class="card-content">
+								<i class="icon-outlined-book text-blue ql-icons quicklink-padding-10"></i>
+								<h4 class="heading-light">Software Licenses</h4>
+							</a>
+						</div>
+					</div>
+					<div id="quickresourcetopdiv" class="col-md-6 col-sm-6 col-xs-11">
+						<div class="well card text-center row-overlay" data-mh="quicklinks-res" style="height: 117px;">
+							<a href="//www.dell.com/support/home/in/en/inbsd1?app=warranty" class="card-content">
+								<i class="icon-outlined-warranty text-blue ql-icons quicklink-padding-10"></i>
+								<h4 class="heading-light">Warranty &amp; Contracts</h4>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div id="quickresourcetopdiv" class="col-md-6 col-sm-6 col-xs-12">
+						<div class="well card text-center row-overlay" data-mh="quicklinks-res" style="height: 117px;">
+							<a href="//www.dell.com/support/home/in/en/inbsd1?app=drivers" class="card-content">
+								<i class="icon-outlined-drivers text-blue ql-icons quicklink-padding-10"></i>
+								<h4 class="heading-light">Drivers &amp; Downloads</h4>
+							</a>
+						</div>
+					</div>
+					<div id="quickresourcetopdiv" class="col-md-6 col-sm-6 col-xs-12">
+						<div class="well card text-center row-overlay" data-mh="quicklinks-res" style="height: 117px;">
+							<a href="//www.dell.com/support/home/in/en/inbsd1/quicktest" class="card-content">
+								<i class="icon-outlined-tools text-blue ql-icons quicklink-padding-10"></i>
+								<h4 class="heading-light">Diagnostics &amp; Tools</h4>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

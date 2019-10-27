@@ -1,0 +1,13 @@
+
+1)let element = $('.slick-track :nth-child(5)');
+
+element.insertAfter('.slick-current');
+
+2)let elementSectionContent = $('.cat-off-screen-pane .fran:nth-child(5)');
+
+elementSectionContent.insertAfter('#cat-content-container .cat-off-screen-pane .visible-xs:nth-child(1)');
+
+$('.cat-off-screen-pane').children().removeClass('active');
+
+elementSectionContent.addClass('active');
+

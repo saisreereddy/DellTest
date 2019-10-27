@@ -1,0 +1,64 @@
+1)
+$('.flex-active-slide').slick({
+autoPlay:false
+});  //Finding the right selector and setting autoPlay to false
+
+
+2)
+a)document.getElementsByClassName('dellmetrics-pl-tab')[0].onclick = function(){
+let firstClickUpdate = document.querySelectorAll('.row .half-hero .half-image-module');
+let firstClickUpdateArray = Array.prototype.slice.call(firstClickUpdate);
+for(var i = 0; i < firstClickUpdateArray.length; i++){
+    firstClickUpdateArray[i].style.backgroundColor = 'purple';
+}
+}
+
+b)document.getElementsByClassName('dellmetrics-pl-tab')[1].onclick = function(){
+let firstClickUpdate = document.querySelectorAll('.row .half-hero .half-image-module');
+let firstClickUpdateArray = Array.prototype.slice.call(firstClickUpdate);
+for(var i = 0; i < firstClickUpdateArray.length; i++){
+    firstClickUpdateArray[i].style.backgroundColor = 'green';
+}
+}
+
+
+
+c)let cameraSectionImages = Array.prototype.slice.call(document.querySelectorAll('.top-offset-20 .row .half-hero')[6].querySelectorAll('.half-inner-module-image img'));
+
+
+let networkSectionImages = Array.prototype.slice.call(document.querySelectorAll('.top-offset-20 .row .half-hero')[10].querySelectorAll('.half-inner-module-image img'));
+
+for(let i=0;i<cameraSectionImages.length;i++){
+for(let j=i;j<i+1;j++){
+networkSectionImages[i].src=cameraSectionImages[j].src
+}
+}
+
+
+d)
+(function alertSum(){
+
+let powerSection = Array.prototype.slice.call(document.querySelectorAll('.top-offset-20 .row .half-hero')[11].querySelectorAll('.half-hero-pricing'));
+
+let powerSectionArrayToSum=[];
+for(let i=0;i<powerSection.length;i++){
+powerSectionArrayToSum.push(powerSection[i].innerText.split('$'));
+}
+
+let powerSectionConcat = powerSectionArrayToSum.reduce((a,b)=>{
+return a.concat(b);
+});
+
+let powerSectionIntoNumber= powerSectionConcat.map(function (x) { 
+  return parseFloat(x, 10); 
+});
+
+let powerSectionRemoveNaN =powerSectionIntoNumber.filter(function (value) {
+    return !Number.isNaN(value);
+});
+
+const alertSumOfPowerSectionProduct = powerSectionRemoveNaN.reduce( (a,b) => {
+return a+b;
+}, 0); 
+alert('$'.concat(alertSumOfPowerSectionProduct));
+})();

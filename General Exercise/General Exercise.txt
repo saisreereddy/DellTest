@@ -1,0 +1,14 @@
+
+1)
+Vanilla -4
+Jquery - 4
+HTML/HTML5-4
+CSS/CSS3-4
+Ajax-3
+AngularJS-3
+Bootstrap-4
+
+
+2) 100 px
+3)$('p:not(last-of-type)')
+4)Return expects variable to be returned beside it, otherwise ASI(Automatic semicolon insertion) will be done , hence as nothing is present beside return undefined is returned
